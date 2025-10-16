@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ELA Recruitment 2025</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'),
+        linear-gradient(135deg, #1e3c72, #2a5298);
+      background-attachment: fixed;
+      background-size: cover;
       color: #fff;
+      text-align: center;
     }
 
     .container {
-      max-width: 600px;
-      margin: 20px auto;
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+      max-width: 700px;
+      margin: 40px auto;
+      background: rgba(20, 20, 20, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
     }
 
+    /* Centered header block */
     header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px;
-      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .header-content {
-      display: flex;
-      align-items: center;
+      display: inline-block;
       background-color: #f8f9fa;
-      border-radius: 10px;
+      border-radius: 12px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .club-logo {
-      height: 150px;
+      height: 130px;
+      display: block;
+      margin: 0 auto;
     }
 
     .club-title {
-      text-align: center;
-      display: none;
-      margin-left: 10px;
-      font-size: 1.5rem;
+      color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-weight: bold;
-    }
-
-    @media (min-width: 768px) {
-      .club-title {
-        display: block;
-      }
+      font-size: 1.5rem;
+      margin-top: 8px;
     }
 
     .header {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #f39c12;
+      background: linear-gradient(90deg, #f39c12, #f1c40f);
       color: black;
       border-radius: 10px;
+      padding: 20px;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
     .content {
@@ -68,28 +70,25 @@
     }
 
     .event {
-      background: #333;
+      background: rgba(51, 51, 51, 0.85);
       padding: 15px;
       border-radius: 8px;
       margin-bottom: 20px;
       text-align: center;
-      box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.1);
     }
 
     .event h3 {
-      margin: 0;
       color: #f39c12;
-    }
-
-    .event p {
-      margin: 5px 0;
-      color: #ddd;
+      margin-bottom: 10px;
     }
 
     .roles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-width: 500px;
+      gap: 12px;
       margin-top: 10px;
     }
 
@@ -101,35 +100,60 @@
       font-weight: bold;
       transition: all 0.3s ease;
       box-shadow: 0 2px 6px rgba(255,255,255,0.1);
-      cursor: pointer;
     }
 
-    /* ✨ Hover Effect */
     .role-box:hover {
-      background-color: #f39c12;
+      background-color: white;
       color: #000;
       transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(243,156,18,0.6);
+    }
+
+    .poster {
+      margin: 20px 0;
+    }
+
+    .poster img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255,255,255,0.2);
     }
 
     .button {
       display: inline-block;
       background: #f39c12;
-      color: #ffffff;
+      color: #000;
       padding: 12px 24px;
       text-decoration: none;
       border-radius: 8px;
       font-size: 16px;
       font-weight: bold;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: #f1c40f;
+      transform: scale(1.05);
+      background-color: white;	
+    }
+
+    .qr {
       margin-top: 20px;
     }
 
-    footer {
-      background-color: #D32F2F;
-      color: white;
-      padding: 40px 0;
+    .qr img {
+      width: 160px;
+      height: 160px;
       border-radius: 10px;
-      margin-top: 20px;
+      box-shadow: 0 2px 10px rgba(255,255,255,0.2);
+    }
+
+    footer {
+      background-color: #d32f2f;
+      color: white;
+      padding: 30px 0;
+      border-radius: 10px;
+      margin-top: 30px;
     }
 
     footer .details {
@@ -142,18 +166,14 @@
     }
 
     footer .details a:hover {
-      color: #388E3C;
-    }
-
-    footer img {
-      width: 200px;
-      height: 200px;
+      color: #388e3c;
     }
 
     .social-icons img {
-      height: 50px;
-      width: 50px;
+      height: 45px;
+      width: 45px;
       border-radius: 8px;
+      margin-left: 10px;
     }
   </style>
 </head>
@@ -163,15 +183,17 @@
     <header>
       <div class="header-content">
         <img src="https://raw.githubusercontent.com/Sushanth1425/ela-guest-lecture/refs/heads/main/logo.JPG" alt="ELA logo" class="club-logo">
-        <p class="club-title" style="color: black; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-          <strong>ENGLISH LITERARY ASSOCIATION</strong>
-        </p>
+        <p class="club-title">ENGLISH LITERARY ASSOCIATION</p>
       </div>
     </header>
 
     <div class="header">
       <h2>📢 ELA Recruitment 2025 is Now Open!</h2>
       <p>Join the English Literary Association and become part of a vibrant creative community.</p>
+    </div>
+
+    <div class="poster">
+      <img style="color:#ccc;" src="https://raw.githubusercontent.com/Sushanth1425/ela-req-2025/refs/heads/main/req-2025-poster.png"/>
     </div>
 
     <div class="content">
@@ -184,37 +206,56 @@
           <div class="role-box">💻 Technical Team</div>
           <div class="role-box">🤝 PR & Outreach</div>
           <div class="role-box">🎪 Event Management</div>
+          <div class="role-box">🖋️ Content Writing Team</div>
         </div>
       </div>
 
       <div class="event">
         <p style="font-size: 16px; color: white;">
-          Are you passionate about creativity, collaboration, and communication?  
-          The <strong>English Literary Association (ELA)</strong> welcomes all enthusiastic students eager to contribute, create, and lead!
-          Be part of our mission to inspire through words, art, and innovation.
+          Are you passionate about creativity, collaboration, and communication?<br>
+          The <strong>English Literary Association (ELA)</strong> welcomes all enthusiastic students eager to contribute, create, and lead!  
         </p>
       </div>
 
-      <div style="text-align: center;">
-        <a href=" " target="_blank" class="button">Apply Now</a>
+      <div class="event" style="background: rgba(255, 255, 255, 0.1);">
+        <p style="font-size: 16px; color: #f1c40f; font-weight: 600;">
+          Where every event is an adventure waiting to happen! 🚀📚
+        </p>
+        <p>
+          Join the English Literary Association and dive into a world of:<br>
+          🎯 English Competitions<br>
+          🛠️ Creative Writing Workshops<br>
+          🎭 Literary Games & Meet-ups
+        </p>
+        <p style="font-size: 16px; color: #f39c12; font-weight: bold;">
+          ✨ Ready to make your college experience truly unforgettable?<br>
+          Join Us Today – Let’s Create Stories Together! ✨
+        </p>
+      </div>
+
+      <a href="https://forms.gle/qAwmuNiFAUabH4158" target="_blank" class="button">Apply Now</a>
+
+      <div class="qr">
+        <p>📱 Scan the QR code to apply:</p>
+        <img src="https://raw.githubusercontent.com/Sushanth1425/ela-req-2025/refs/heads/main/2025-req-qr.png" alt="ELA Recruitment QR Code">
       </div>
     </div>
 
-    <footer>
+    <footer>	
       <div class="details">
         <p>
-          For further information: <br>
+          For further information:<br>
           Contact: <a href="mailto:english.asso@vitap.ac.in">english.asso@vitap.ac.in</a><br><br>
-          Best regards, <br>
+          Best regards,<br>
           Faculty Coordinator: Dr. Sudesh Manger <br>
-          Mail: <a href="mailto:sudesh.manger@vitap.ac.in">sudesh.manger@vitap.ac.in</a><br><br>
+          <a href="mailto:sudesh.manger@vitap.ac.in">sudesh.manger@vitap.ac.in</a><br><br>
           President: T. Vaibhav <br>
-          Mail: <a href="mailto:vaibhav.23bce20213@vitapstudent.ac.in">vaibhav.23bce20213@vitapstudent.ac.in</a>
+          <a href="mailto:vaibhav.23bce20213@vitapstudent.ac.in">vaibhav.23bce20213@vitapstudent.ac.in</a>
         </p>
       </div>
 
       <div class="social-icons" style="display: flex; align-items: center; justify-content: center;">
-        <p style="padding: 10px; margin-right: 15px;">Follow ELA on Instagram:</p>
+        <p style="padding: 10px;">Follow ELA on Instagram:</p>
         <a href="https://www.instagram.com/ela_vitap/?igsh=MWpvYW5hZ2dnYXN5YQ%3D%3D">
           <img src="https://img.freepik.com/premium-photo/colorful-logo-with-symbol-it_1109006-106599.jpg?w=740" alt="Instagram">
         </a>
